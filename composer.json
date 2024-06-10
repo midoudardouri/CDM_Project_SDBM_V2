@@ -1,9 +1,10 @@
 {
-    "name": "99ar019/mvc_tuto_youtube_exmple_sdbm_complet",
+    "name": "proprietaire/html2pdf",
+    "type": "project",
     "authors": [
         {
-            "name": "vao49",
-            "email": "fbrc.le.blanc@gmail.com"
+            "name": "Dardouri",
+            "email": "dardourisenpay@gmail.com"
         }
     ],
     "require": {
