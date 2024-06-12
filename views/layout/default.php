@@ -39,6 +39,9 @@
                             <a class="nav-link" href="<?= PATH ?>/tickets">Gestion des Tickets</a>
                         </li>
                         <li class="nav-item">
+                            <a class="nav-link" href="<?= PATH ?>/couleurs">Gestion des Couleurs</a>
+                        </li>
+                        <li class="nav-item">
                             <a class="nav-link" href="#">Link</a>
                         </li>
                     </ul>
