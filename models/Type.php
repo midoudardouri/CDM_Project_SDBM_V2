@@ -1,52 +1,59 @@
 <?php
-class Fabricant extends Model{
+class Type extends Model{
 
     public function __construct()
     {
         // Nous définissons la table par défaut de ce modèle
-        $this->table = "fabricant";
+        $this->table = "type";
     
         // Nous ouvrons la connexion à la base de données
         $this->getConnection();
     }
 
     /**
-     * Met à jour le nom du Fabricant à partir de son ID
+     * Met à jour le nom d'un Typebiere à partir de son ID
      *
      * @param int $id
      * @param string $slug
      * @return void
      */
     public function update(int $id, string $nom) {
-        $sql = "UPDATE ".$this->table." set NOM_FABRICANT=:p_nom WHERE ID_FABRICANT=:p_id";
+
+        $nom = htmlspecialchars($nom); // Faille XSS
+        
+        $sql = "UPDATE ".$this->table." set NOM_TYPE=:p_nom WHERE ID_TYPE=:p_id";
         $query = $this->_connexion->prepare($sql);
         $query->bindParam(':p_id', $id,  PDO::PARAM_INT );
-        $query->bindParam(':p_nom', $nom,  PDO::PARAM_STR );
+        $query->bindParam(':p_nom',  $nom ,  PDO::PARAM_STR );
         $query->execute();  
     }
+
     /**
-     * Supprime un Fabricant à partir de son ID
+     * Supprime un Type à partir de son ID
      *
      * @param int $id
      * @return void
      */
     public function delete(int $id) {
-        $sql = "DELETE FROM ".$this->table." WHERE ID_FABRICANT=:p_id";
+        $sql = "DELETE FROM ".$this->table." WHERE ID_TYPE=:p_id";
         $query = $this->_connexion->prepare($sql);
         $query->bindParam(':p_id', $id,  PDO::PARAM_INT );
         $query->execute();    
     }
 
      /**
-     * Ajoute un Fabricant
+     * Ajoute un Type
      *
      * @param string $nom
      * @return void
      */
     public function insert(string $nom) {
-        $sql = "INSERT INTO ".$this->table." (NOM_FABRICANT) VALUES (:p_nom)";
+
+        $nom = htmlspecialchars($nom); // Faille XSS
+        
+        $sql = "INSERT INTO ".$this->table." (NOM_TYPE) VALUES (:p_nom)";
         $query = $this->_connexion->prepare($sql);
-        $query->bindParam(':p_nom', $nom,  PDO::PARAM_STR );
+        $query->bindParam(':p_nom',  $nom ,  PDO::PARAM_STR );
         $query->execute();    
     }
 
