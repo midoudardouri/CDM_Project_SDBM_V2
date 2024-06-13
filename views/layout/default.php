@@ -48,8 +48,9 @@
                             <a class="nav-link" href="<?= PATH ?>/fabricants">Gestion des Fabricant</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Link</a>
+                            <a class="nav-link" href="<?= PATH ?>/articles">Gestion des Article</a>
                         </li>
+                    
                     </ul>
                 </div>
             </nav>
