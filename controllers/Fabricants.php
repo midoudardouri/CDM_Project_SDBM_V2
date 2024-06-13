@@ -9,14 +9,14 @@ class Fabricants extends Controller{
      */
     public function index(){
         // On instancie le modèle "Fabricant"
-        $this->loadModel('Fabricant');
+        $this->loadModel('fabricant');
 
         // On stocke les Marques dans $Fabricants
         // (Y COMPRIS celles qui n'ont pas de FABRICANT)
-        $fabricants = $this->Fabricant->getAll();
+        $fabricants = $this->fabricant->getAll();
 
         // On envoie les données à la vue index
-        $this->render('index', compact('Fabricants'));
+        $this->render('index', compact('fabricants'));
     }
 
     /**
@@ -27,17 +27,17 @@ class Fabricants extends Controller{
      */
     public function modif(int $id){
         // On instancie le modèle "Fabricant"
-        $this->loadModel('Fabricant');
+        $this->loadModel('fabricant');
 
 
         // On stocke la marque dans $Fabricant
-        $this->Fabricant->id = array(
-            'ID_Fabricant' => $id
+        $this->fabricant->id = array(
+            'ID_FABRICANT' => $id
         );
-        $fabricant = $this->Fabricant->getOne();
+        $fabricant = $this->fabricant->getOne();
 
         // On envoie les données à la vue modif
-        $this->render('modif', compact('Fabricant'));
+        $this->render('modif', compact('fabricant'));
     }
 
     /**
@@ -54,19 +54,19 @@ class Fabricants extends Controller{
         $nom = $_REQUEST['Nom'];
 
         // On instancie le modèle "Fabricant"
-        $this->loadModel('Fabricant');
+        $this->loadModel('fabricant');
 
         // On effectue la mise à jour
-        $this->Fabricant->update($id, $nom);
+        $this->fabricant->update($id, $nom);
 
         // On redirige vers la liste
         // On stocke les continent dans $Fabricant
-        $fabricants = $this->Fabricant->getAll();
+        $fabricants = $this->fabricant->getAll();
         
         $message = "Fabricant bien modifiée";
-        $fabricant_message = "success";
+        $type_message = "success";
         // On envoie les données à la vue index
-        $this->render('index', compact('Fabricants', 'message', 'fabricant_message'));
+        $this->render('index', compact('fabricants', 'message', 'type_message'));
     }
 
 
@@ -82,12 +82,12 @@ class Fabricants extends Controller{
 
         // On stocke la marque dans $Fabricant
         $this->Fabricant->id = array(
-            'ID_Fabricant' => $id
+            'ID_FABRICANT' => $id
         );
-        $marque = $this->Fabricant->getOne();
+        $fabricant = $this->Fabricant->getOne();
 
         // On envoie les données à la vue modif
-        $this->render('suppr', compact('Fabricant'));
+        $this->render('suppr', compact('fabricant'));
     }
 
     /**
@@ -108,12 +108,12 @@ class Fabricants extends Controller{
 
         // On redirige vers la liste
         // On stocke les marques dans $Fabricants
-        $marques = $this->Fabricant->getAll();
+        $fabricants = $this->Fabricant->getAll();
         
         $message = "Fabricant Bien Supprimé";
-        $fabricant_message = "success";
+        $type_message = "success";
         // On envoie les données à la vue index
-        $this->render('index', compact('Fabricants', 'message', 'fabricant_message'));
+        $this->render('index', compact('fabricants', 'message', 'type_message'));
     }
 
     /**
@@ -145,11 +145,11 @@ class Fabricants extends Controller{
 
         // On redirige vers la liste
         // On stocke les marques dans $Fabricants
-        $marques = $this->Fabricant->getAll();
+        $fabricants = $this->Fabricant->getAll();
         
         $message = "Fabricant bien Ajoutée";
-        $fabricant_message = "success";
+        $type_message = "success";
         // On envoie les données à la vue index
-        $this->render('index', compact('Fabricants', 'message', 'fabricant_message'));
+        $this->render('index', compact('fabricants', 'message', 'type_message'));
     }
 }

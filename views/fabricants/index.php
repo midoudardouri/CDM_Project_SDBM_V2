@@ -10,7 +10,7 @@
         <th>Actions</th>
     </tr>
 
-    <?php foreach($Types as $fabricant): ?>
+    <?php foreach($fabricants as $fabricant): ?>
 
     <tr>
         <td><?= $fabricant['ID_FABRICANT'] ?></td>
