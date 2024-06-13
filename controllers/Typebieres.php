@@ -1,6 +1,6 @@
 <?php
 
-class Types extends Controller{
+class Typebieres extends Controller{
     /**
      * Cette méthode affiche la liste des Types
      *
@@ -9,14 +9,14 @@ class Types extends Controller{
      */
     public function index(){
         // On instancie le modèle "Type"
-        $this->loadModel('Type');
+        $this->loadModel('typebiere');
 
         // On stocke les Marques dans $Types
         // (Y COMPRIS celles qui n'ont pas de FABRICANT)
-        $types = $this->Type->getAll();
+        $typebieres = $this->typebiere->getAll();
 
         // On envoie les données à la vue index
-        $this->render('index', compact('Types'));
+        $this->render('index', compact('typebieres'));
     }
 
     /**
@@ -27,17 +27,17 @@ class Types extends Controller{
      */
     public function modif(int $id){
         // On instancie le modèle "Type"
-        $this->loadModel('Type');
+        $this->loadModel('typebiere');
 
 
         // On stocke la marque dans $Type
-        $this->Type->id = array(
-            'ID_Type' => $id
+        $this->typebiere->id = array(
+            'ID_TYPE' => $id
         );
-        $type = $this->Type->getOne();
+        $typebiere = $this->typebiere->getOne();
 
         // On envoie les données à la vue modif
-        $this->render('modif', compact('Type'));
+        $this->render('modif', compact('typebiere'));
     }
 
     /**
@@ -54,19 +54,19 @@ class Types extends Controller{
         $nom = $_REQUEST['Nom'];
 
         // On instancie le modèle "Type"
-        $this->loadModel('Type');
+        $this->loadModel('typebiere');
 
         // On effectue la mise à jour
-        $this->Type->update($id, $nom);
+        $this->typebiere->update($id, $nom);
 
         // On redirige vers la liste
         // On stocke les continent dans $Type
-        $types = $this->Type->getAll();
+        $typebieres = $this->typebiere->getAll();
         
         $message = "Type bien modifiée";
         $type_message = "success";
         // On envoie les données à la vue index
-        $this->render('index', compact('Types', 'message', 'type_message'));
+        $this->render('index', compact('typebieres', 'message', 'type_message'));
     }
 
 
@@ -78,16 +78,16 @@ class Types extends Controller{
      */
     public function suppr(int $id){
         // On instancie le modèle "Type"
-        $this->loadModel('Type');
+        $this->loadModel('typebiere');
 
         // On stocke la marque dans $Type
-        $this->Type->id = array(
-            'ID_Type' => $id
+        $this->typebiere->id = array(
+            'ID_TYPE' => $id
         );
-        $marque = $this->Type->getOne();
+        $typebiere = $this->typebiere->getOne();
 
         // On envoie les données à la vue modif
-        $this->render('suppr', compact('Type'));
+        $this->render('suppr', compact('typebiere'));
     }
 
     /**
@@ -101,19 +101,19 @@ class Types extends Controller{
 
         $id = $_REQUEST['Id'];
         // On instancie le modèle "Type"
-        $this->loadModel('Type');
+        $this->loadModel('typebiere');
 
         // On effectue la mise à jour
-        $this->Type->delete($id);
+        $this->typebiere->delete($id);
 
         // On redirige vers la liste
         // On stocke les marques dans $Types
-        $marques = $this->Type->getAll();
+        $typebieres = $this->typebiere->getAll();
         
         $message = "Type Bien Supprimé";
         $type_message = "success";
         // On envoie les données à la vue index
-        $this->render('index', compact('Types', 'message', 'type_message'));
+        $this->render('index', compact('typebieres', 'message', 'type_message'));
     }
 
     /**
@@ -138,18 +138,18 @@ class Types extends Controller{
         $nom = $_REQUEST['Nom'];
 
         // On instancie le modèle "Type"
-        $this->loadModel('Type');
+        $this->loadModel('typebiere');
 
         // On effectue la mise à jour
-        $this->Type->insert($nom);
+        $this->typebiere->insert($nom);
 
         // On redirige vers la liste
         // On stocke les marques dans $Types
-        $marques = $this->Type->getAll();
+        $typebieres = $this->typebiere->getAll();
         
         $message = "Type bien Ajoutée";
         $type_message = "success";
         // On envoie les données à la vue index
-        $this->render('index', compact('Types', 'message', 'type_message'));
+        $this->render('index', compact('typebieres', 'message', 'type_message'));
     }
 }
