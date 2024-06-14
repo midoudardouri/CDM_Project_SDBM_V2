@@ -13,10 +13,19 @@ class Lespays extends Controller{
 
         // On stocke les PAYS dans $lespays
          $lespays = $this->Pays->getAll_with_continent();
- 
+         // scriptJS pour la recherche 
+         $scriptJS = "$(document).ready(function () {
+            // Fonction de recherche
+            $('#searchInput').on('keyup', function () {
+                var value = $(this).val().toLowerCase();
+                $('#countryTable tbody tr').filter(function () {
+                    $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+                });
+            });
+        })";
 
         // On envoie les données à la vue index
-        $this->render('index', compact('lespays'));
+        $this->render('index', compact('lespays','scriptJS'));
     }
 
     /**

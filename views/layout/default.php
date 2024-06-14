@@ -7,6 +7,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="<?= PATH ?>/views/Css/continents.css">
+    <link rel="stylesheet" href="<?= PATH ?>/views/Css/couleur.css">
+    <link rel="stylesheet" href="<?= PATH ?>/views/Css/lespays.css">
+    <link rel="stylesheet" href="<?= PATH ?>/views/Css/marques.css">
+    <link rel="stylesheet" href="<?= PATH ?>/views/Css/ticket.css">
 </head>
 
 <body>
@@ -59,14 +64,23 @@
                     $message
                 </div>";
             }
-        ?>
+                 ?>
                 <?= $content ?>
 
                 <footer>
                     <h2>Mon super footer</h2>
                 </footer>
-                <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-
+                 <!-- Bootstrap JS -->
+                  <!-- Include jQuery -->
+                 
+                 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+                 <!-- JS Pour le Recherche -->
+                 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+               <script>
+                <?php
+            echo @$scriptJS;
+              ?>
+               </script>
     </div>
 
 </body>

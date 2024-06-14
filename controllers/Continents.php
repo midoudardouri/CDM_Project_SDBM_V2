@@ -18,9 +18,18 @@ class Continents extends Controller{
 
         // $this->loadModel('Marque');
         // $marques = $this->Marque->getAll();
-
+        $scriptJS = "$(document).ready(function () {
+            // Fonction de recherche
+            $('#searchInput').on('keyup', function () {
+                var value = $(this).val().toLowerCase();
+                $('#continentTable tbody tr').filter(function () {
+                    $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+                });
+            });
+        })";
+        
         // On envoie les données à la vue index
-        $this->render('index', compact('continents'));
+        $this->render('index', compact('continents','scriptJS'));
     }
 
     /**

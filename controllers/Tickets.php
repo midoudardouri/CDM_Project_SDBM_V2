@@ -68,7 +68,17 @@ class Tickets extends Controller{
         // }
 
         // On envoie les données à la vue index
-        $this->render('index', compact('tickets', 'no_page', 'no_page_suivante', 'no_page_prec', 'last_no_page'));
+        // scriptJS pour la recherche 
+        $scriptJS = "$(document).ready(function () {
+            // Fonction de recherche
+            $('#searchInput').on('keyup', function () {
+                var value = $(this).val().toLowerCase();
+                $('#ticketTable tbody tr').filter(function () {
+                    $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+                });
+            });
+        })";
+        $this->render('index', compact('tickets', 'no_page', 'no_page_suivante', 'no_page_prec', 'last_no_page', 'scriptJS'));
     }
 
 
