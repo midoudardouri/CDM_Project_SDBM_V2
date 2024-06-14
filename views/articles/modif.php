@@ -30,7 +30,7 @@
           <select name="Id_Couleur" id="Id_Couleur" class="form-control" />
             <?php foreach($Couleurs as $Couleur): ?>
                 <option value=<?php
-                      //echo $Couleur['ID_COULEUR'];
+                      echo $Couleur['ID_COULEUR'];
                       if ($article['ID_COULEUR'] == $Couleur['ID_COULEUR']) {
                            echo " selected";
                       }
