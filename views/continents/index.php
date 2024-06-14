@@ -1,28 +1,50 @@
-<h1>Liste des Continents</h1>
+<div class="container">
+        <!-- Titre principal avec animation de saut -->
+        <h1>
+            <span>L</span><span>i</span><span>s</span><span>t</span><span>e</span>
+            <span>d</span><span>e</span>
+            <span>s</span>
+            <span>C</span><span>o</span><span>n</span><span>t</span><span>i</span><span>n</span><span>e</span><span>n</span><span>t</span><span>s</span>
+        </h1>
 
-<a href="<?= PATH ?>/continents/ajout"><button type='button'
-        class='btn btn-primary bi bi-plus-circle'>&nbsp;Ajouter</button></a><br />
+        <!-- Bouton d'ajout -->
+        <div style="text-align: center; margin-bottom: 20px;">
+            <a href="<?= PATH ?>/continents/ajout">
+                <button type='button' class='btn'>
+                    <i class="fas fa-plus-circle"></i>&nbsp;Ajouter
+                </button>
+            </a>
+        </div>
 
-<table class="table table-dark table-hover">
-    <tr>
-        <th>Code</th>
-        <th>Nom</th>
-        <th>Actions</th>
-    </tr>
+        <!-- Barre de recherche -->
+        <div class="search-container">
+            <input type="text" class="search-box" id="searchInput" placeholder="Rechercher...">
+        </div>
 
-    <?php foreach($continents as $continent): ?>
-
-    <tr>
-        <td><?= $continent['ID_CONTINENT'] ?></td>
-        <td><?= $continent['NOM_CONTINENT'] ?></td>
-        <td>
-            <a href="<?= PATH ?>/continents/modif/<?= $continent['ID_CONTINENT'] ?>"><button
-                    class="btn btn-success bi bi-pencil"></button></a>
-            <a href="<?= PATH ?>/continents/suppr/<?= $continent['ID_CONTINENT'] ?>"><button
-                    class="btn btn-danger bi bi-trash3"></button></a>
-        </td>
-    </tr>
-
-    <?php endforeach ?>
-
-</table>
+        <!-- Tableau des continents -->
+        <table id="continentTable">
+            <thead>
+                <tr>
+                    <th>Code</th>
+                    <th>Nom</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php foreach($continents as $continent): ?>
+                <tr>
+                    <td><?= $continent['ID_CONTINENT'] ?></td>
+                    <td><?= $continent['NOM_CONTINENT'] ?></td>
+                    <td>
+                        <a href="<?= PATH ?>/continents/modif/<?= $continent['ID_CONTINENT'] ?>" class="btn">
+                            <i class="fas fa-pencil-alt"></i>&nbsp;Modifier
+                        </a>
+                        <a href="<?= PATH ?>/continents/suppr/<?= $continent['ID_CONTINENT'] ?>" class="btn">
+                            <i class="fas fa-trash-alt"></i>&nbsp;Supprimer
+                        </a>
+                    </td>
+                </tr>
+                <?php endforeach ?>
+            </tbody>
+        </table>
+    </div>
