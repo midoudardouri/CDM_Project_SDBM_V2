@@ -1,3 +1,4 @@
+<div class="container">
 <h1>Détail du ticket : <?php  echo $annee;  ?> / <?php  echo $no_ticket;  ?> </h1>
 
 
@@ -13,7 +14,7 @@
 </a>
 <br />
 
-<table class="table table-dark table-hover">
+<table class="table table table-hover">
     <tr>
         <th>Code article</th>
         <th>Nom article</th>
@@ -49,3 +50,5 @@
 
 </table>
 <h2 class="text-danger text-center">Total général du Ticket : <b><?= $total_general." €" ?> </b></h2>
+
+</div>

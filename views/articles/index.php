@@ -2,8 +2,9 @@
 
 <a href="<?= PATH ?>/articles/ajout"><button type='button'
         class='btn btn-primary bi bi-plus-circle'>&nbsp;Ajouter</button></a><br />
-
-<table class="table table-dark table-hover">
+        <div class="container-fluid ">
+<table class="table table table-hover">
+   
     <tr>
         <th>Code</th>
         <th>Nom</th>
@@ -32,3 +33,4 @@
     <?php endforeach ?>
 
 </table>
+</DIV>

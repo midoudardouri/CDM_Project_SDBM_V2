@@ -1,3 +1,5 @@
+<div class="container">
+
 <h1>Liste des Pays</h1>
 <!-- <?php
 print_r($lespays);
@@ -5,7 +7,7 @@ print_r($lespays);
 <a href="<?= PATH ?>/lespays/ajout"><button type='button'
         class='btn btn-primary bi bi-plus-circle'>&nbsp;Ajouter</button></a><br />
 
-<table class="table table-dark table-hover">
+<table class="table table table-hover">
     <tr>
         <th>Code</th>
         <th>Nom</th>
@@ -30,3 +32,5 @@ print_r($lespays);
     <?php endforeach ?>
 
 </table>
+
+</div>

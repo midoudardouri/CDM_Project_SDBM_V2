@@ -11,7 +11,7 @@
 
           <select name="Id_Marque" id="Id_Marque" class="form-control"/>
             <?php foreach($marques as $marque): ?>
-                <option value=<?= $marque['ID_MARQUE'] ?>><?= $continent['NOM_MARQUE'] ?></option>
+                <option value=<?= $marque['ID_MARQUE'] ?>><?= $marque['NOM_MARQUE'] ?></option>
             <?php endforeach ?>
           </select>
         </div>

@@ -26,9 +26,17 @@ class Articles extends Controller{
      * @return void
      */
     public function modif(int $id){
+        // On instancie le modèle "article"
+        $this->loadModel('Article');
+
+         // On instancie le modèle "Article" pour générer le COMBO
+        $this->Article->id = array(
+            'ID_ARTICLE' => $id
+        );
+        $article = $this->Article->getOne();
         // On instancie le modèle "Marque" pour générer le COMBO
         $this->loadModel('Marque'); 
-        $marques = $this->marque->getAll("NOM_MARQUE asc");
+        $marques = $this->Marque->getAll("NOM_MARQUE asc");
 
         // On instancie le modèle "Type" pour générer le COMBO
         $this->loadModel('typebiere');
@@ -39,18 +47,9 @@ class Articles extends Controller{
         $this->loadModel('Couleur');
         // On stocke les Couleur dans $Couleurs
         $Couleurs = $this->Couleur->getAll("NOM_COULEUR");
-
-        
-        // On instancie le modèle "Marque"
-        $this->loadModel('Article');
-
-        // On stocke la marque dans $marque
-        $this->Article->id = array(
-            'ID_ARTICLE' => $id
-        );
-        $articles = $this->Article->getOne();
+       
         // On envoie les données à la vue modif
-        $this->render('modif', compact('articles','marques','typebieres','couleurs'));
+        $this->render('modif', compact('article','marques','typebieres','Couleurs'));
 
     }
 
@@ -64,19 +63,19 @@ class Articles extends Controller{
     public function modif_sauve(int $id){
 
         // On recupère les données envoyées par le formulaire
-        $id = $_REQUEST['Id'];
+        $id =$_REQUEST['Id'];
         $nom = $_REQUEST['Nom'];
-        $id_marq = $_REQUEST['Id_marque'];
-        $id_typ = $_REQUEST['Id_type'];
-        $id_coul = $_REQUEST['Id_couleur'];
+        $id_marq = $_REQUEST['Id_Marque'];
+        $id_typ= $_REQUEST['Id_type'];
+        $id_coul =$_REQUEST['Id_Couleur'];
         
-
+        var_dump( $id,$nom,$id_marq,$id_typ,$id_coul);
         // print_r($_REQUEST);
-        // On instancie le modèle "Marque"
+        // On instancie le modèle "Article"
         $this->loadModel('Article');
 
         // On effectue la mise à jour
-        $this->Article->update($id, $nom, $id_marq, $id_typ,$id_coul);
+        $this->Article->update($id,$nom,$id_marq,$id_typ,$id_coul);
 
         // On redirige vers la liste
         // On stocke les continent dans $marques
@@ -119,7 +118,7 @@ class Articles extends Controller{
         $article = $this->Article->getOne();
 
         // On envoie les données à la vue modif
-        $this->render('suppr', compact('articles','marques','typebieres','couleurs'));
+        $this->render('suppr', compact('article','marques','typebieres','Couleurs'));
     }
 
     /**
@@ -152,7 +151,7 @@ class Articles extends Controller{
     public function ajout(){
         // On instancie le modèle "Marque"
         $this->loadModel('Marque'); 
-        $marques = $this->marque->getAll("NOM_MARQUE asc");
+        $marques = $this->Marque->getAll("NOM_MARQUE asc");
         // On instancie le modèle "Type" pour générer le COMBO
         $this->loadModel('typebiere');
         // On stocke les Couleur dans $typebiere
@@ -176,9 +175,9 @@ class Articles extends Controller{
 
         // On recupère les données envoyées par le formulaire
         $nom = $_REQUEST['Nom'];
-        $id_marq = $_REQUEST['Id_marque'];
+        $id_marq = $_REQUEST['Id_Marque'];
         $id_typ = $_REQUEST['Id_type'];
-        $id_coul = $_REQUEST['Id_couleur'];
+        $id_coul = $_REQUEST['Id_Couleur'];
 
         // print_r($_REQUEST);
 

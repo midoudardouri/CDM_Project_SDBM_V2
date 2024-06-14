@@ -1,3 +1,4 @@
+<div class="container">
 <h1>
     Liste des Tickets
 </h1>
@@ -37,7 +38,7 @@
 <a href="<?= PATH ?>/tickets/ajout"><button type='button'
         class='btn btn-primary bi bi-plus-circle'>&nbsp;Ajouter</button></a><br />
 
-<table class="table table-dark table-hover">
+<table class="table table table-hover">
     <tr>
         <th>Année</th>
         <th>N° du Ticket</th>
@@ -64,3 +65,5 @@
     <?php endforeach ?>
 
 </table>
+
+</div>

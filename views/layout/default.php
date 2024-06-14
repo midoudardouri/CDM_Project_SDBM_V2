@@ -13,7 +13,7 @@
 
     <div class="container-fluid">
         <header>
-            <nav class="navbar navbar-expand-md bg-dark navbar-dark">
+            <nav class="navbar navbar-expand-md  ">
                 <!-- Brand -->
                 <a class="navbar-brand" href="<?= PATH ?>/">Accueil</a>
 
@@ -70,7 +70,7 @@
                 <?= $content ?>
 
                 <footer>
-                    <h2>Mon super footer</h2>
+                    <h2> .................. </h2>
                 </footer>
                 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
 

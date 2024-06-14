@@ -38,19 +38,26 @@ class Article extends Model{
      *  @param int $id_coul
      * @return void
      */
-     public function update(int $id, string $nom) {
-         $sql = "UPDATE ".$this->table." set NOM_ARTICLE=:p_nom WHERE ID_ARTICLE=:p_id";
+     public function update(int $id, string $nom ,$id_marq, int $id_typ, int $id_coul) {
+         $sql = "UPDATE ".$this->table." set NOM_ARTICLE = :p_nom, ID_MARQUE = :p_id_marq, ID_TYPE = :p_id_typ, ID_COULEUR = :p_id_coul
+                WHERE ID_ARTICLE = :p_id";
          $query = $this->_connexion->prepare($sql);
          $query->bindParam(':p_id', $id,  PDO::PARAM_INT );
          $query->bindParam(':p_nom', $nom,  PDO::PARAM_STR );
+         $query->bindParam(':p_id_marq', $id_marq, PDO::PARAM_INT);
+         $query->bindParam(':p_id_typ', $id_typ, PDO::PARAM_INT);
+         $query->bindParam(':p_id_coul', $id_coul, PDO::PARAM_INT);
          $query->execute();  
      }
 
      /**
       * Supprime un Continent à partir de son ID
-      *
+      * @param string $nom
       * @param int $id
-      * @return void
+      * @param int $id_marq
+      * @param int $id_typ
+      * @param int $id_coul
+       *@return void
       */
      public function delete(int $id) {
          $sql = "DELETE FROM ".$this->table." WHERE ID_ARTICLE=:p_id";
@@ -63,12 +70,19 @@ class Article extends Model{
       * Ajoute un Continent 
       *
      * @param string $nom
+      * @param int $id
+      * @param int $id_marq
+      * @param int $id_typ
+      * @param int $id_coul
       * @return void
       */
-     public function insert(string $nom) {
+     public function insert(string $nom , int $id_marq, int $id_typ, int $id_coul) {
          $sql = "INSERT INTO ".$this->table." (NOM_ARTICLE) VALUES (:p_nom)";
          $query = $this->_connexion->prepare($sql);
          $query->bindParam(':p_nom', $nom,  PDO::PARAM_STR );
+         $query->bindParam(':p_id_marq', $id_marq, PDO::PARAM_INT);
+         $query->bindParam(':p_id_typ', $id_typ, PDO::PARAM_INT);
+         $query->bindParam(':p_id_coul', $id_coul, PDO::PARAM_INT);
          $query->execute();    
      }
 
