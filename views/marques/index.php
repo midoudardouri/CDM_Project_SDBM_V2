@@ -1,10 +1,9 @@
-<div class="container">
 <h1>Liste des Marques</h1>
 
 <a href="<?= PATH ?>/marques/ajout"><button type='button'
         class='btn btn-primary bi bi-plus-circle'>&nbsp;Ajouter</button></a><br />
 
-<table class="table table table-hover">
+<table class="table table-dark table-hover">
     <tr>
         <th>Code</th>
         <th>Nom</th>
@@ -31,5 +30,3 @@
     <?php endforeach ?>
 
 </table>
-
-</div>

@@ -1,11 +1,9 @@
-<div class="container">
 <h1>Liste des Continents</h1>
 
 <a href="<?= PATH ?>/continents/ajout"><button type='button'
         class='btn btn-primary bi bi-plus-circle'>&nbsp;Ajouter</button></a><br />
 
-
-<table class="table tabletable-hover">
+<table class="table table-dark table-hover">
     <tr>
         <th>Code</th>
         <th>Nom</th>
@@ -28,4 +26,3 @@
     <?php endforeach ?>
 
 </table>
-</DIV>
