@@ -18,7 +18,7 @@
 
     <div class="container-fluid">
         <header>
-            <nav class="navbar navbar-expand-md  ">
+            <nav class="navbar navbar-expand-md bg-dark navbar-dark">
                 <!-- Brand -->
                 <a class="navbar-brand" href="<?= PATH ?>/">Accueil</a>
 
@@ -47,15 +47,8 @@
                             <a class="nav-link" href="<?= PATH ?>/couleurs">Gestion des Couleurs</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="<?= PATH ?>/typebieres">Gestion des Type Biere</a>
+                            <a class="nav-link" href="#">Link</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="<?= PATH ?>/fabricants">Gestion des Fabricant</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="<?= PATH ?>/articles">Gestion des Article</a>
-                        </li>
-                    
                     </ul>
                 </div>
             </nav>
@@ -75,7 +68,7 @@
                 <?= $content ?>
 
                 <footer>
-                    <h2> .................. </h2>
+                    <h2>Mon super footer</h2>
                 </footer>
                  <!-- Bootstrap JS -->
                   <!-- Include jQuery -->

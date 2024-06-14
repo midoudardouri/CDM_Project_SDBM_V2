@@ -5,31 +5,34 @@
     <div class="btn-group">
         Page N° <?= @$no_page ?> &nbsp;&nbsp;
 
-                <a href="<?= PATH ?>/tickets/page/1">
-                    <button type="button" class="btn btn-secondary">
-                        <i class="bi bi-caret-left-square text-warning"> Début de liste</i>
-                    </button>
-                </a>
+        <a href="<?= PATH ?>/tickets/page/1">
+            <button type="button" class="btn btn-secondary">
+                <i class="bi bi-caret-left-square text-warning"> Début de liste</i>
+            </button>
+        </a>
 
-                <a href="<?= PATH ?>/tickets/page/<?= @$no_page_prec ?>">
-                    <button type="button" class="btn btn-secondary">
-                        <i class="bi bi-caret-left  text-warning"> Page Précédente</i>
-                    </button>
-                </a>
 
-                <a href="<?= PATH ?>/tickets/page/<?= @$no_page_suivante ?>">
-                    <button type="button" class="btn btn-secondary">
-                        <i class="bi bi-caret-right  text-warning"> Page Suivante</i>
-                    </button>
-                </a>
+        <a href="<?= PATH ?>/tickets/page/<?= @$no_page_prec ?>">
+            <button type="button" class="btn btn-secondary">
+                <i class="bi bi-caret-left  text-warning"> Page Précédente</i>
+            </button>
+        </a>
 
-                <a href="<?= PATH ?>/tickets/page/<?= @$last_no_page ?>">
-                    <button type="button" class="btn btn-secondary">
-                        <i class="bi bi-caret-right-square  text-warning"> Fin de liste</i>
-                    </button>
-                </a>
-            </div>
-        </h2>
+
+        <a href="<?= PATH ?>/tickets/page/<?= @$no_page_suivante ?>">
+            <button type="button" class="btn btn-secondary">
+                <i class="bi bi-caret-right  text-warning"> Page Suivante</i>
+            </button>
+        </a>
+
+        <a href="<?= PATH ?>/tickets/page/<?= @$last_no_page ?>">
+            <button type="button" class="btn btn-secondary">
+                <i class="bi bi-caret-right-square  text-warning"> Fin de liste</i>
+            </button>
+        </a>
+
+    </div>
+</h2>
 
 <a href="<?= PATH ?>/tickets/ajout"><button type='button'
         class='btn btn-primary bi bi-plus-circle'>&nbsp;Ajouter</button></a><br />
