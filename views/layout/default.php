@@ -47,7 +47,13 @@
                             <a class="nav-link" href="<?= PATH ?>/couleurs">Gestion des Couleurs</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Link</a>
+                            <a class="nav-link" href="<?= PATH ?>/fabricants">Gestion des Fabricants</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="<?= PATH ?>/typebieres">Gestion des type bieres</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="<?= PATH ?>/articles">Gestion des Articles</a>
                         </li>
                     </ul>
                 </div>
