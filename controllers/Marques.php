@@ -14,16 +14,18 @@ class Marques extends Controller{
         // On stocke les Marques dans $marques
         // (Y COMPRIS celles qui n'ont pas de FABRICANT)
         $marques = $this->Marque->getAll_with_pays_and_fabricant_null();
-// scriptJS pour la recherche 
-$scriptJS = "$(document).ready(function () {
-            // Fonction de recherche
-            $('#searchInput').on('keyup', function () {
-                var value = $(this).val().toLowerCase();
-                $('#brandTable tbody tr').filter(function () {
-                    $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
-                });
-            });
-        })";
+                // scriptJS pour la recherche  
+                $scriptJS = "$(document).ready(function () {
+                  // Fonction de recherche
+                  $('#searchInput').on('keyup', function () {
+                      var value = $(this).val().toLowerCase();
+                      $('#marqueTable tbody tr').filter(function () {
+                          $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+                      });
+                  }) ;
+                })";
+              
+
         // On envoie les données à la vue index
         $this->render('index', compact('marques','scriptJS'));
     }

@@ -145,7 +145,7 @@ class Lespays extends Controller{
 
         // On stocke les PAYS dans $lespays
         $lespays = $this->Pays->getAll_with_continent();
-        $scriptJS = $scriptJS = <<<SCRIPT
+       $scriptJS = <<<SCRIPT
         const swalWithBootstrapButtons = Swal.mixin({
           customClass: {
             confirmButton: "btn btn-success",

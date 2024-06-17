@@ -7,7 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="<?= PATH ?>/views/Css/continents.css">
     <link rel="stylesheet" href="<?= PATH ?>/views/Css/couleur.css">
     <link rel="stylesheet" href="<?= PATH ?>/views/Css/lespays.css">
     <link rel="stylesheet" href="<?= PATH ?>/views/Css/marques.css">
@@ -17,13 +16,23 @@
     <link rel="stylesheet" href="<?= PATH ?>/views/Css/footer.css">
     <link rel="stylesheet" href="<?= PATH ?>/views/Css/navbar.css">    
     <link rel="stylesheet" href="<?= PATH ?>/views/Css/main.css">
+    <link rel="stylesheet" href="<?= PATH ?>/views/Css/continents.css">
     <!-- SweetAlert2 -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script src="sweetalert2.min.js"></script>
-    <link rel="stylesheet" href="sweetalert2.min.css">
+    <script src="../../node_modules/sweetalert2/dist/sweetalert2.min.js"></script>
+    <link rel="stylesheet" href="../../node_modules/sweetalert2/dist/sweetalert2.min.css">
     <link href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-dark@4/dark.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.js"></script>
-    <link rel="stylesheet" href="<?= PATH ?>/views/Css/navbar.css"> <!-- Add this line for your custom CSS -->
+    <link rel="stylesheet" href="<?= PATH ?>/views/Css/navbar.css"> 
+    <!-- Add this line for your custom CSS -->
+     <style>
+        .navbar-custom {
+  border-bottom: 2px solid #de6913;
+}
+.footer {
+    border-top: 2px solid #de6913; /* Change the color and width of the top border */
+}
+     </style>
 </head>
 
 <body>
@@ -55,6 +64,18 @@
     </header>
 
     <div class="content">
+    <?php
+            // Y a t il un message d'alert à afficher
+            if (isset($message)) {
+                if (!isset($type_message)) {
+                    $type_message ="info";
+                }
+                echo "<div class='alert alert-$type_message alert-dismissible'>
+                    <button type='button' class='btn-close' data-bs-dismiss='alert'></button>
+                    $message
+                </div>";
+            }
+        ?>
         <!-- Content goes here -->
         <?= $content ?>
     </div>

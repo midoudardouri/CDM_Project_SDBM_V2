@@ -45,6 +45,7 @@
                 <button type='button' class='btn'>
                     <i class="bi bi-plus-circle"></i>&nbsp;Ajouter
                 </button>
+                <a href="<?= PATH ?>/main"><button  class="btn btn-warning">Retour a la list </button></a>
             </a>
         </div>
 

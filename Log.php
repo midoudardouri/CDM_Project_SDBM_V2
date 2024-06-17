@@ -33,7 +33,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             // Identifiants corrects
             $_SESSION['loggedin'] = true;
             $_SESSION['attempts'] = 0; // Réinitialiser les tentatives après une connexion réussie
-            header("Location: index.php"); // Rediriger vers une autre page
+            header("Location:index.php"); // Rediriger vers une autre page
             exit(); // Assurer que le script s'arrête après la redirection
         } else {
             // Identifiants incorrects
@@ -192,4 +192,3 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <script src="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.js"></script>
 </body>
 </html>
-

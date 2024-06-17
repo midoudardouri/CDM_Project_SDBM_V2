@@ -23,6 +23,7 @@ require_once(ROOT.'app/Controller.php');
 try {
         // On sépare les paramètres et on les met dans le tableau $params
         $params = explode('/', @$_GET['p']);
+       
 
         // Si au moins 1 paramètre existe
         if($params[0] != ""){
@@ -68,6 +69,7 @@ try {
 
             // On appelle la méthode index
             $controller->index();
+            
         }
 } catch (Exception $e) {
             // Il y a eu une exception de levée

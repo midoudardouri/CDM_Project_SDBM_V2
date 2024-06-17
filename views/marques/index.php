@@ -24,7 +24,7 @@
         </div>
 
         <!-- Tableau des marques -->
-        <table id="brandTable">
+        <table id="marqueTable">
             <thead>
                 <tr>
                     <th>Code</th>

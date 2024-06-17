@@ -153,7 +153,7 @@ class Articles extends Controller{
         $this->Article->delete($id);
        
         $articles = $this->Article->getAll_with_marque_typebiere_couleur();
-        $scriptJS = $scriptJS = <<<SCRIPT
+      $scriptJS = <<<SCRIPT
         const swalWithBootstrapButtons = Swal.mixin({
           customClass: {
             confirmButton: "btn btn-success",
@@ -227,6 +227,7 @@ class Articles extends Controller{
     public function ajout_sauve(){
 
         // On recupère les données envoyées par le formulaire
+      
         $nom = $_REQUEST['Nom'];
         $id_marq = $_REQUEST['Id_Marque'];
         $id_typ = $_REQUEST['Id_type'];
