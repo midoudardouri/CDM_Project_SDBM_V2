@@ -78,7 +78,7 @@ class Articles extends Controller{
         $id_typ= $_REQUEST['Id_type'];
         $id_coul =$_REQUEST['Id_Couleur'];
         
-        var_dump( $id,$nom,$id_marq,$id_typ,$id_coul);
+        
         // print_r($_REQUEST);
         // On instancie le modèle "Article"
         $this->loadModel('Article');
@@ -215,6 +215,7 @@ class Articles extends Controller{
         // On stocke les Couleur dans $Couleurs
         $Couleurs = $this->Couleur->getAll("NOM_COULEUR");
         // On affiche le formulaire
+        var_dump( $marques,$typebieres,$Couleurs);
         $this->render('ajout', compact('marques','typebieres','Couleurs'));
     }
 
@@ -233,7 +234,7 @@ class Articles extends Controller{
         $id_typ = $_REQUEST['Id_type'];
         $id_coul = $_REQUEST['Id_Couleur'];
 
-        // print_r($_REQUEST);
+         print_r($_REQUEST);
 
         // On instancie le modèle "Marque"
         $this->loadModel('Article');

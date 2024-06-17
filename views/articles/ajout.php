@@ -1,5 +1,4 @@
-<h1>Ajout d'un Pays</h1>
-
+<h1>Ajout d'un Article</h1>
 <form action="<?= PATH ?>/articles/ajout_sauve" method="POST">
         <div class="form-group">
           <label for="Nom">Nom Article:</label>
@@ -11,6 +10,7 @@
 
           <select name="Id_Marque" id="Id_Marque" class="form-control"/>
             <?php foreach($marques as $marque): ?>
+                <option value=<?= $marque['ID_MARQUE'] ?>><?= $marque['NOM_MARQUE'] ?></option>
                 <option value=<?= $marque['ID_MARQUE'] ?>><?= $marque['NOM_MARQUE'] ?></option>
             <?php endforeach ?>
           </select>
@@ -33,11 +33,10 @@
             <?php endforeach ?>
           </select>
         </div>
-        <div class="text-center">
         <button type="submit" class="btn btn-primary">Enregistrer</button>
-        <a href="<?= PATH ?>/articles"><button  class="btn btn-warning">Retour à la liste</button></a>
-        </div>
 </form>  
+<a href="<?= PATH ?>/articles"><button  class="btn btn-warning">Retour à la liste</button></a>
+        </div>
 
 
    
