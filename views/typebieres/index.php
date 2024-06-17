@@ -16,6 +16,7 @@
                 <i class="bi bi-plus-circle"></i>&nbsp;Ajouter
             </button>
         </a>
+        <a href="<?= PATH ?>/main"><button  class="btn btn-warning">Retour a la list </button></a>
     </div>
 
     <!-- Barre de recherche -->

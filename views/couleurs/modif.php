@@ -1,5 +1,5 @@
 <h1>Modification d'un Couleur</h1>
-
+<div class="text-center">
 <form action="<?= PATH ?>/Couleurs/modif_sauve/<?= $Couleur['ID_COULEUR'] ?>" method="POST">
         <div class="form-group">
           <label for="Id">Code Couleur :</label>
@@ -9,8 +9,8 @@
         <div class="form-group">
           <label for="Nom">Nom couleur:</label>
           <input type="text" class="form-control" placeholder="Saisir un Nom" name="Nom" id="Nom"
-          value=<?= $Couleur['NOM_COULEUR'] ?>>
+          value=<?= $Couleur['NOM_COULEUR'] ?> required>
         </div>
         <button type="submit" class="btn btn-primary">Enregistrer</button>
 </form>  
-<a href="<?= PATH ?>/Couleurs"><button  class="btn btn-warning">Retour à la liste</button></a>
+<a href="<?= PATH ?>/Couleurs"><button  class="btn btn-warning">Retour à la liste</button></a></div>

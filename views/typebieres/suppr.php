@@ -1,4 +1,5 @@
 <h1>Suppression d'un type de Biere</h1>
+<div class="text-center">
 <form action="<?= PATH ?>/typebieres/suppr_sauve/<?= $typebiere['ID_TYPE'] ?>" method="POST">
         <div class="form-group">
           <label for="Id">Code Type :</label>
@@ -12,4 +13,4 @@
         </div>
         <button type="submit" class="btn btn-primary">Enregistrer</button>
 </form>  
-<a href="<?= PATH ?>/typebieres"><button  class="btn btn-warning">Retour à la liste</button></a>
+<a href="<?= PATH ?>/typebieres"><button  class="btn btn-warning">Retour à la liste</button></a></div>

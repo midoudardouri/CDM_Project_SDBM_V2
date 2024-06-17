@@ -1,4 +1,5 @@
 <h1>Suppression d'un Continent</h1>
+<div class="text-center">
 <form action="<?= PATH ?>/continents/suppr_sauve/<?= $continent['ID_CONTINENT'] ?>" method="POST">
         <div class="form-group">
           <label for="Id">Code Continent :</label>
@@ -12,4 +13,4 @@
         </div>
         <button type="submit" class="btn btn-primary">Enregistrer</button>
 </form>  
-<a href="<?= PATH ?>/continents"><button  class="btn btn-warning">Retour à la liste</button></a>
+<a href="<?= PATH ?>/continents"><button  class="btn btn-warning">Retour à la liste</button></a></div>

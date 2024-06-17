@@ -3,7 +3,7 @@
 <form action="<?= PATH ?>/lespays/ajout_sauve" method="POST">
         <div class="form-group">
           <label for="Nom">Nom Pays:</label>
-          <input type="text" class="form-control" placeholder="Saisir un Nom" name="Nom" id="Nom" />
+          <input type="text" class="form-control" placeholder="Saisir un Nom" name="Nom" id="Nom"  required/>
         </div>
         <div class="form-group">
           <label for="Nom">Continent:</label>
@@ -15,4 +15,4 @@
         </div>
         <button type="submit" class="btn btn-primary">Enregistrer</button>
 </form>  
-<a href="<?= PATH ?>/lespays"><button  class="btn btn-warning">Retour à la liste</button></a>
+<a href="<?= PATH ?>/lespays"><button  class="btn btn-warning">Retour à la liste</button></a></div>

@@ -74,10 +74,19 @@ class Continents extends Controller{
         // On stocke les continent dans $continents
         $continents = $this->Continent->getAll();
         
+        $scriptJS = <<<SCRIPT
+Swal.fire({
+  position: "top-end",
+  icon: "success",
+  title: "Continent bien modifié",
+  showConfirmButton: false,
+  timer: 1500
+});
+SCRIPT;
         $message = "Continent bien modifié";
         $type_message = "success";
         // On envoie les données à la vue index
-        $this->render('index', compact('continents', 'message', 'type_message'));
+        $this->render('index', compact('continents', 'message', 'type_message','scriptJS'));
     }
 
 
@@ -122,11 +131,47 @@ class Continents extends Controller{
         // On redirige vers la liste
         // On stocke les continent dans $continents
         $continents = $this->Continent->getAll();
+        $scriptJS = $scriptJS = <<<SCRIPT
+        const swalWithBootstrapButtons = Swal.mixin({
+          customClass: {
+            confirmButton: "btn btn-success",
+            cancelButton: "btn btn-danger"
+          },
+          buttonsStyling: false
+        });
+        
+        swalWithBootstrapButtons.fire({
+          title: "Are you sure?",
+          text: "You won't be able to revert this!",
+          icon: "warning",
+          showCancelButton: true,
+          confirmButtonText: "Yes, delete it!",
+          cancelButtonText: "No, cancel!",
+          reverseButtons: true
+        }).then((result) => {
+          if (result.isConfirmed) {
+            swalWithBootstrapButtons.fire({
+              title: "Deleted!",
+              text: "Your file has been deleted.",
+              icon: "success"
+            });
+          } else if (
+            result.dismiss === Swal.DismissReason.cancel
+          ) {
+            swalWithBootstrapButtons.fire({
+              title: "Cancelled",
+              text: "Your imaginary file is safe :)",
+              icon: "error"
+            });
+          }
+        });
+        SCRIPT;
+      
         
         $message = "Continent bien supprimé";
         $type_message = "success";
         // On envoie les données à la vue index
-        $this->render('index', compact('continents', 'message', 'type_message'));
+        $this->render('index', compact('continents', 'message', 'type_message','scriptJS'));
     }
 
     /**
@@ -161,10 +206,19 @@ class Continents extends Controller{
         // On redirige vers la liste
         // On stocke les continent dans $continents
         $continents = $this->Continent->getAll();
-        
+        $scriptJS = <<<SCRIPT
+Swal.fire({
+  position: "top-end",
+  icon: "success",
+  title: "Continent bien Ajouté",
+  showConfirmButton: false,
+  timer: 1500
+});
+SCRIPT;
+ 
         $message = "Continent bien Ajouté";
         $type_message = "success";
         // On envoie les données à la vue index
-        $this->render('index', compact('continents', 'message', 'type_message'));
+        $this->render('index', compact('continents', 'message', 'type_message','scriptJS'));
     }
 }

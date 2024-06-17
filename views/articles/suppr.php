@@ -9,6 +9,8 @@
           <label for="Nom">Nom Article:</label>
           <input type="text" class="form-control" value='<?= $article['NOM_ARTICLE'] ?>' name="Nom" id="Nom" readonly/>
         </div>
+        <div class="text-center">
         <button type="submit" class="btn btn-primary">Enregistrer</button>
+        <a href="<?= PATH ?>/articles"><button  class="btn btn-warning">Retour à la liste</button></a>
+        </div>
 </form>  
-<a href="<?= PATH ?>/articles"><button  class="btn btn-warning">Retour à la liste</button></a>

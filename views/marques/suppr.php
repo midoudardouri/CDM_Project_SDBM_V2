@@ -1,5 +1,5 @@
 <h1>Suppression d'une Marque</h1>
-
+<div class="text-center">
 <form action="<?= PATH ?>/marques/suppr_sauve/<?= $marque['ID_MARQUE'] ?>" method="POST">
         <div class="form-group">
           <label for="Nom">Code:</label>
@@ -11,4 +11,4 @@
         </div>
         <button type="submit" class="btn btn-primary">Enregistrer</button>
 </form>  
-<a href="<?= PATH ?>/marques"><button  class="btn btn-warning">Retour à la liste</button></a>
+<a href="<?= PATH ?>/marques"><button  class="btn btn-warning">Retour à la liste</button></a></div>

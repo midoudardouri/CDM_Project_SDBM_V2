@@ -1,0 +1,18 @@
+{
+    "name": "proprietaire/composer",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "Proprietaire\\Composer\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Dardouri",
+            "email": "dardourisenpay@gmail.com"
+        }
+    ],
+    "require": {
+        "gregwar/captcha": "^1.2"
+    }
+}

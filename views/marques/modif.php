@@ -1,5 +1,5 @@
 <h1>Modification d'une Marque</h1>
-
+<div class="text-center">
 <form action="<?= PATH ?>/marques/modif_sauve/<?= $marque['ID_MARQUE'] ?>" method="POST">
         <div class="form-group">
           <label for="Nom">Code:</label>
@@ -7,7 +7,7 @@
         </div>
         <div class="form-group">
           <label for="Nom">Nom Marque:</label>
-          <input type="text" class="form-control" value='<?= $marque['NOM_MARQUE'] ?>' name="Nom" id="Nom" />
+          <input type="text" class="form-control" value='<?= $marque['NOM_MARQUE'] ?>' name="Nom" id="Nom"  required/>
         </div>
         <div class="form-group">
             <label for="Nom">Fabricant:</label>
@@ -40,4 +40,4 @@
         </div>
         <button type="submit" class="btn btn-primary">Enregistrer</button>
 </form>  
-<a href="<?= PATH ?>/marques"><button  class="btn btn-warning">Retour à la liste</button></a>
+<a href="<?= PATH ?>/marques"><button  class="btn btn-warning">Retour à la liste</button></a></div>

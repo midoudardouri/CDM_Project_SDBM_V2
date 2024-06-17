@@ -56,6 +56,8 @@
             <?php endforeach ?>
           </select>
         </div>
+        <div class="text-center"><div>
         <button type="submit" class="btn btn-primary">Enregistrer</button>
+        <a href="<?= PATH ?>/articles"><button  class="btn btn-warning">Retour à la liste</button></a>
+        </div>
 </form>  
-<a href="<?= PATH ?>/articles"><button  class="btn btn-warning">Retour à la liste</button></a>

@@ -1,5 +1,5 @@
 <h1>Modification d'un Continent</h1>
-
+<div class="text-center">
 <form action="<?= PATH ?>/continents/modif_sauve/<?= $continent['ID_CONTINENT'] ?>" method="POST">
         <div class="form-group">
           <label for="Id">Code Continent :</label>
@@ -9,8 +9,8 @@
         <div class="form-group">
           <label for="Nom">Nom Continent:</label>
           <input type="text" class="form-control" placeholder="Saisir un Nom" name="Nom" id="Nom"
-          value=<?= $continent['NOM_CONTINENT'] ?>>
+          value=<?= $continent['NOM_CONTINENT'] ?> required >
         </div>
         <button type="submit" class="btn btn-primary">Enregistrer</button>
 </form>  
-<a href="<?= PATH ?>/continents"><button  class="btn btn-warning">Retour à la liste</button></a>
+<a href="<?= PATH ?>/continents"><button  class="btn btn-warning">Retour à la liste</button></a></div>

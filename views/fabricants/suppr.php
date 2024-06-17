@@ -1,4 +1,5 @@
 <h1>Suppression d'un Fabricant</h1>
+<div class="text-center">
 <form action="<?= PATH ?>/fabricants/suppr_sauve/<?= $fabricant['ID_FABRICANT'] ?>" method="POST">
         <div class="form-group">
           <label for="Id">Code Fabricant :</label>
@@ -12,4 +13,4 @@
         </div>
         <button type="submit" class="btn btn-primary">Enregistrer</button>
 </form>  
-<a href="<?= PATH ?>/fabricants"><button  class="btn btn-warning">Retour à la liste</button></a>
+<a href="<?= PATH ?>/fabricants"><button  class="btn btn-warning">Retour à la liste</button></a></div>

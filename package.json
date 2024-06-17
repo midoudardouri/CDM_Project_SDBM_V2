@@ -1,0 +1,16 @@
+{
+  "name": "80-npm-et-composer-par-moi",
+  
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@sweetalert2/theme-dark": "^5.0.16",
+    "sweetalert2": "^11.11.1"
+  }
+}

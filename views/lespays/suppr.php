@@ -1,5 +1,5 @@
 <h1>Suppression d'un Pays</h1>
-
+<div class="text-center">
 <form action="<?= PATH ?>/lespays/suppr_sauve/<?= $pays['ID_PAYS'] ?>" method="POST">
         <div class="form-group">
           <label for="Nom">Code:</label>
@@ -26,4 +26,4 @@
         </div>
         <button type="submit" class="btn btn-primary">Enregistrer</button>
 </form>  
-<a href="<?= PATH ?>/lespays"><button  class="btn btn-warning">Retour à la liste</button></a>
+<a href="<?= PATH ?>/lespays"><button  class="btn btn-warning">Retour à la liste</button></a></div>

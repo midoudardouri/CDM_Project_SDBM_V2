@@ -1,5 +1,5 @@
 <h1>Ajout d'une Marque</h1>
-
+<div class="text-center">
 <form action="<?= PATH ?>/marques/ajout_sauve" method="POST">
         <div class="form-group">
           <label for="Nom">Nom Marque:</label>
@@ -24,4 +24,4 @@
         </div>
         <button type="submit" class="btn btn-primary">Enregistrer</button>
 </form>  
-<a href="<?= PATH ?>/marques"><button  class="btn btn-warning">Retour à la liste</button></a>
+<a href="<?= PATH ?>/marques"><button  class="btn btn-warning">Retour à la liste</button></a></div>

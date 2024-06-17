@@ -1,0 +1,51 @@
+body {
+    background: #000; /* Fond noir */
+    color: #0f0; /* Texte vert */
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    font-family: 'Courier New', Courier, monospace; /* Police monospace pour un effet hacker */
+}
+.form-container {
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0, 255, 0, 0.5); /* Ombre verte */
+    background-color: #222; /* Fond sombre */
+    color: #0f0; /* Texte vert */
+}
+.form-container h1 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #0f0;
+}
+.form-container .form-label {
+    font-weight: bold;
+    color: #0f0;
+}
+.form-container .form-control {
+    border-radius: 10px;
+    background-color: #333; /* Fond des champs de formulaire */
+    border: 1px solid #0f0; /* Bordure verte */
+    color: #0f0; /* Texte vert */
+}
+.form-container .form-control:focus {
+    background-color: #444; /* Changement de fond au focus */
+    border-color: #0f0;
+    box-shadow: 0 0 10px rgba(0, 255, 0, 0.5); /* Ombre verte au focus */
+}
+.form-container .btn-warning {
+    background-color: #0f0; /* Bouton vert */
+    border: none;
+    border-radius: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #000; /* Texte noir */
+}
+.form-container .btn-warning:hover {
+    background-color: #0c0; /* Vert foncé au survol */
+}
+img {
+    border: 1px solid #0f0;
+}

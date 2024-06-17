@@ -1,0 +1,18 @@
+{
+    "name": "proprietaire/emailer",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "Proprietaire\\Emailer\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Dardouri",
+            "email": "dardourisenpay@gmail.com"
+        }
+    ],
+    "require": {
+        "phpmailer/phpmailer": "^6.9"
+    }
+}
