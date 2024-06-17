@@ -1,31 +1,51 @@
+
 <div class="container">
-<h1>Liste des Fabricants</h1>
+    <!-- Titre principal avec animation de saut -->
+    <h1>
+        <span>L</span><span>i</span><span>s</span><span>t</span><span>e</span>
+        <span>d</span><span>e</span>
+        <span>s</span>
+        <span>F</span><span>a</span><span>b</span><span>r</span><span>i</span><span>c</span><span>a</span><span>n</span><span>t</span><span>s</span>
+    </h1>
 
-<a href="<?= PATH ?>/fabricants/ajout"><button fabricant='button'
-        class='btn btn-primary bi bi-plus-circle'>&nbsp;Ajouter</button></a><br />
+    <!-- Bouton d'ajout -->
+    <div style="text-align: center; margin-bottom: 20px;">
+        <a href="<?= PATH ?>/fabricants/ajout">
+            <button type='button' class='btn'>
+                <i class="bi bi-plus-circle"></i>&nbsp;Ajouter
+            </button>
+        </a>
+    </div>
 
-<table class="table table table-hover">
-    <tr>
-        <th>Code</th>
-        <th>Nom</th>
-        <th>Actions</th>
-    </tr>
+    <!-- Barre de recherche -->
+    <div class="search-container">
+        <input type="text" class="search-box" id="searchInput" placeholder="Rechercher...">
+    </div>
 
-    <?php foreach($fabricants as $fabricant): ?>
-
-    <tr>
-        <td><?= $fabricant['ID_FABRICANT'] ?></td>
-        <td><?= $fabricant['NOM_FABRICANT'] ?></td>
-        <td>
-            <a href="<?= PATH ?>/fabricants/modif/<?= $fabricant['ID_FABRICANT'] ?>"><button
-                    class="btn btn-success bi bi-pencil"></button></a>
-            <a href="<?= PATH ?>/fabricants/suppr/<?= $fabricant['ID_FABRICANT'] ?>"><button
-                    class="btn btn-danger bi bi-trash3"></button></a>
-        </td>
-    </tr>
-
-    <?php endforeach ?>
-
-</table>
-
+    <!-- Tableau des fabricants -->
+    <table id="fabricantTable">
+        <thead>
+            <tr>
+                <th>Code</th>
+                <th>Nom</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <?php foreach($fabricants as $fabricant): ?>
+            <tr>
+                <td><?= $fabricant['ID_FABRICANT'] ?></td>
+                <td><?= $fabricant['NOM_FABRICANT'] ?></td>
+                <td>
+                    <a href="<?= PATH ?>/fabricants/modif/<?= $fabricant['ID_FABRICANT'] ?>" class="btn">
+                        <i class="bi bi-pencil"></i>&nbsp;Modifier
+                    </a>
+                    <a href="<?= PATH ?>/fabricants/suppr/<?= $fabricant['ID_FABRICANT'] ?>" class="btn">
+                        <i class="bi bi-trash"></i>&nbsp;Supprimer
+                    </a>
+                </td>
+            </tr>
+            <?php endforeach ?>
+        </tbody>
+    </table>
 </div>

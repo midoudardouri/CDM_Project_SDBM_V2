@@ -12,6 +12,9 @@
     <link rel="stylesheet" href="<?= PATH ?>/views/Css/lespays.css">
     <link rel="stylesheet" href="<?= PATH ?>/views/Css/marques.css">
     <link rel="stylesheet" href="<?= PATH ?>/views/Css/ticket.css">
+    <link rel="stylesheet" href="<?= PATH ?>/views/Css/Typebieres.css">
+    <link rel="stylesheet" href="<?= PATH ?>/views/Css/Fabricant.css">
+    <link rel="stylesheet" href="<?= PATH ?>/views/Css/Article.css">
 </head>
 
 <body>

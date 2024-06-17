@@ -14,9 +14,18 @@ class Fabricants extends Controller{
         // On stocke les Marques dans $Fabricants
         // (Y COMPRIS celles qui n'ont pas de FABRICANT)
         $fabricants = $this->fabricant->getAll();
+        $scriptJS = "$(document).ready(function () {
+            // Fonction de recherche
+            $('#searchInput').on('keyup', function () {
+                var value = $(this).val().toLowerCase();
+                $('#fabricantTable tbody tr').filter(function () {
+                    $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+                });
+            });
+        })";
 
         // On envoie les données à la vue index
-        $this->render('index', compact('fabricants'));
+        $this->render('index', compact('fabricants','scriptJS'));
     }
 
     /**

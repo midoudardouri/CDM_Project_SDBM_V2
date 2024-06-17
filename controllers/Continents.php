@@ -16,8 +16,7 @@ class Continents extends Controller{
         // On stocke les continent dans $continents
         $continents = $this->Continent->getAll();
 
-        // $this->loadModel('Marque');
-        // $marques = $this->Marque->getAll();
+     
         $scriptJS = "$(document).ready(function () {
             // Fonction de recherche
             $('#searchInput').on('keyup', function () {

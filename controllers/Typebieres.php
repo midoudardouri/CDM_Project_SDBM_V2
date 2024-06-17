@@ -14,9 +14,18 @@ class Typebieres extends Controller{
         // On stocke les Marques dans $Types
         // (Y COMPRIS celles qui n'ont pas de FABRICANT)
         $typebieres = $this->typebiere->getAll();
+        $scriptJS = "$(document).ready(function () {
+            // Fonction de recherche
+            $('#searchInput').on('keyup', function () {
+                var value = $(this).val().toLowerCase();
+                $('#typebiereTable tbody tr').filter(function () {
+                    $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+                });
+            });
+        })";
 
         // On envoie les données à la vue index
-        $this->render('index', compact('typebieres'));
+        $this->render('index', compact('typebieres','scriptJS'));
     }
 
     /**

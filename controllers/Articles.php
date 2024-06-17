@@ -14,9 +14,18 @@ class Articles extends Controller{
         // On stocke les Marques dans $marques
         // (Y COMPRIS celles qui n'ont pas de FABRICANT)
         $articles = $this->Article->getAll_with_marque_typebiere_couleur();
+        $scriptJS = "$(document).ready(function () {
+            // Fonction de recherche
+            $('#searchInput').on('keyup', function () {
+                var value = $(this).val().toLowerCase();
+                $('#articleTable tbody tr').filter(function () {
+                    $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+                });
+            });
+        })";
 
         // On envoie les données à la vue index
-        $this->render('index', compact('articles'));
+        $this->render('index', compact('articles','scriptJS'));
     }
 
     /**

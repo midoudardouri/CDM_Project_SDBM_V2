@@ -11,7 +11,7 @@
         <div style="text-align: center; margin-bottom: 20px;">
             <a href="<?= PATH ?>/continents/ajout">
                 <button type='button' class='btn'>
-                    <i class="fas fa-plus-circle"></i>&nbsp;Ajouter
+                    <i class="bi bi-plus-circle"></i>&nbsp;Ajouter
                 </button>
             </a>
         </div>
@@ -37,10 +37,10 @@
                     <td><?= $continent['NOM_CONTINENT'] ?></td>
                     <td>
                         <a href="<?= PATH ?>/continents/modif/<?= $continent['ID_CONTINENT'] ?>" class="btn">
-                            <i class="fas fa-pencil-alt"></i>&nbsp;Modifier
+                            <i class="bi bi-pencil"></i>&nbsp;Modifier
                         </a>
                         <a href="<?= PATH ?>/continents/suppr/<?= $continent['ID_CONTINENT'] ?>" class="btn">
-                            <i class="fas fa-trash-alt"></i>&nbsp;Supprimer
+                            <i class="bi bi-trash"></i>&nbsp;Supprimer
                         </a>
                     </td>
                 </tr>

@@ -12,7 +12,7 @@
         <div style="text-align: center; margin-bottom: 20px;">
             <a href="<?= PATH ?>/couleurs/ajout">
                 <button type='button' class='btn'>
-                    <i class="fas fa-plus-circle"></i>&nbsp;Ajouter
+                    <i class="bi bi-plus-circle"></i>&nbsp;Ajouter
                 </button>
             </a>
         </div>
