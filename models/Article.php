@@ -77,7 +77,7 @@ class Article extends Model{
       * @return void
       */
      public function insert(string $nom , int $id_marq, int $id_typ, int $id_coul) {
-         $sql = "INSERT INTO ".$this->table." (NOM_ARTICLE) VALUES (:p_nom)";
+         $sql = "INSERT INTO ".$this->table."(NOM_ARTICLE, ID_MARQUE, ID_TYPE, ID_COULEUR) VALUES (:p_nom, :p_id_marq, :p_id_typ, :p_id_coul)";
          $query = $this->_connexion->prepare($sql);
          $query->bindParam(':p_nom', $nom,  PDO::PARAM_STR );
          $query->bindParam(':p_id_marq', $id_marq, PDO::PARAM_INT);
