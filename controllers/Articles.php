@@ -48,9 +48,9 @@ class Articles extends Controller{
         $marques = $this->Marque->getAll("NOM_MARQUE asc");
 
         // On instancie le modèle "Type" pour générer le COMBO
-        $this->loadModel('typebiere');
+        $this->loadModel('Typebiere');
         // On stocke les Couleur dans $typebiere
-        $typebieres = $this->typebiere->getAll("NOM_TYPE asc");
+        $typebieres = $this->Typebiere->getAll("NOM_TYPE asc");
 
         // On instancie le modèle "Couleur" pour générer le COMBO
         $this->loadModel('Couleur');
@@ -118,9 +118,9 @@ class Articles extends Controller{
         $marques = $this->Marque->getAll("NOM_MARQUE asc");
 
         // On instancie le modèle "Type" pour générer le COMBO
-        $this->loadModel('typebiere');
+        $this->loadModel('Typebiere');
         // On stocke les Couleur dans $typebiere
-        $typebieres = $this->typebiere->getAll("NOM_TYPE asc");
+        $typebieres = $this->Typebiere->getAll("NOM_TYPE asc");
 
         // On instancie le modèle "Couleur" pour générer le COMBO
         $this->loadModel('Couleur');
@@ -206,9 +206,9 @@ class Articles extends Controller{
         $this->loadModel('Marque'); 
         $marques = $this->Marque->getAll("NOM_MARQUE asc");
         // On instancie le modèle "Type" pour générer le COMBO
-        $this->loadModel('typebiere');
+        $this->loadModel('Typebiere');
         // On stocke les Couleur dans $typebiere
-        $typebieres = $this->typebiere->getAll("NOM_TYPE asc");
+        $typebieres = $this->Typebiere->getAll("NOM_TYPE asc");
 
         // On instancie le modèle "Couleur" pour générer le COMBO
         $this->loadModel('Couleur');
