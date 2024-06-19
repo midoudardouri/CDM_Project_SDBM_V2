@@ -1,0 +1,306 @@
+body {
+    background-color: black;
+    color: orange;
+}
+
+button {
+    border: 2px solid orange;
+    color: orange;
+    background-color: black;
+    padding: 10px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+body {
+    background-color: #000;
+    /* Fond noir */
+    color: #fff;
+    font-family: Arial, sans-serif;
+}
+
+/* Style pour le titre avec animation de saut */
+h1 {
+    color: #ff4500;
+    /* Orange Red */
+    text-align: center;
+    font-size: 48px;
+    margin-top: 50px;
+    text-shadow: 2px 2px 4px rgba(255, 69, 0, 0.5);
+    display: inline-block;
+    position: relative;
+}
+
+h1 span {
+    display: inline-block;
+    animation: jump 0.5s infinite;
+}
+
+h1 span:nth-child(odd) {
+    animation-delay: 0.1s;
+}
+
+h1 span:nth-child(even) {
+    animation-delay: 0.2s;
+}
+
+@keyframes jump {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Style du tableau */
+table {
+    background-color: transparent;
+    border-collapse: separate;
+    border-spacing: 0 10px;
+    color: #ff8c00;
+    /* Dark Orange */
+    width: 100%;
+    animation: slideIn 1s ease-in-out;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+th,
+td {
+    border: none;
+    padding: 15px;
+    text-align: center;
+    font-size: 18px;
+}
+
+th {
+    background-color: #1a1a1a;
+    /* Dark background for table headers */
+    color: #ff4500;
+    /* Orange Red */
+    text-transform: uppercase;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(255, 69, 0, 0.5);
+}
+
+td {
+    background-color: #000000;
+    /* Dark background for table cells */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(255, 140, 0, 0.5);
+    /* Dark Orange shadow */
+}
+
+/* Style des boutons */
+.btn {
+    color: #fff;
+    border: none;
+    padding: 8px 15px;
+    margin: 2px;
+    font-size: 16px;
+    cursor: pointer;
+    background: linear-gradient(45deg, #ff4500, #ff8c00);
+    /* Gradient from Orange Red to Dark Orange */
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(255, 69, 0, 0.5);
+    /* Orange Red shadow */
+    transition: background 0.3s, transform 0.3s;
+    animation: btnPulse 4s infinite;
+    /* Temporary animation for buttons */
+}
+
+@keyframes btnPulse {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+.btn:hover {
+    background: linear-gradient(45deg, #ff8c00, #ff4500);
+    /* Reverse gradient on hover */
+    transform: scale(1.1);
+}
+
+/* Style de la barre de recherche */
+.search-container {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.search-box {
+    padding: 8px;
+    border-radius: 20px;
+    border: 2px solid #ff4500;
+    /* Orange Red border */
+    background-color: transparent;
+    color: #fff;
+    width: 300px;
+    font-size: 16px;
+}
+
+/* navbar.css */
+
+.navbar-custom {
+    background-color: #000;
+    /* Noir */
+}
+
+.navbar-custom .navbar-brand,
+.navbar-custom .nav-link {
+    color: #ffa500;
+    /* Orange */
+}
+
+.navbar-custom .nav-link:hover,
+.navbar-custom .nav-link.active {
+    color: #fff;
+    /* Blanc pour le survol et la page sélectionnée */
+    background-color: #ffa500;
+    /* Orange pour le survol et la page sélectionnée */
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.navbar-custom .navbar-toggler {
+    border-color: #ffa500;
+    /* Orange pour le bouton toggler */
+}
+
+.navbar-custom .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='%23ffa500' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    background: #000000;
+}
+
+.content {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.footer {
+    background: rgb(244, 162, 8);
+    min-height: 100px;
+    padding: 20px 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+}
+
+.social-icon,
+.menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+    flex-wrap: wrap;
+}
+
+.social-icon__item,
+.menu__item {
+    list-style: none;
+}
+
+.social-icon__link {
+    font-size: 2rem;
+    color: #fff;
+    margin: 0 10px;
+    display: inline-block;
+    transition: 0.5s;
+}
+
+.social-icon__link:hover {
+    transform: translateY(-10px);
+}
+.bg-dark {
+--bs-bg-opacity: 1;
+background-color: rgb(0, 0, 0) !important;
+}
+
+.menu__link {
+    font-size: 1.2rem;
+    color: #fff;
+    margin: 0 10px;
+    display: inline-block;
+    transition: 0.5s;
+    text-decoration: none;
+    opacity: 0.75;
+    font-weight: 300;
+}
+
+.menu__link:hover {
+    opacity: 1;
+}
+
+.footer p {
+    color: #fff;
+    margin: 15px 0 10px 0;
+    font-size: 1rem;
+    font-weight: 300;
+}
+
+@keyframes animateWaves {
+    0% {
+        background-position-x: 1000px;
+    }
+
+    100% {
+        background-position-x: 0px;
+    }
+}
+
+@keyframes animate {
+    0% {
+        background-position-x: -1000px;
+    }
+
+    100% {
+        background-position-x: 0px;
+    }
+    
+    
+}
