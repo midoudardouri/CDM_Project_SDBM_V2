@@ -1,0 +1,68 @@
+body {
+    background-color: #000;
+    color: #ffa500;
+    font-family: 'Courier New', Courier, monospace;
+    animation: backgroundAnim 10s infinite alternate;
+}
+
+@keyframes backgroundAnim {
+    0% { background-color: #000; }
+    50% { background-color: #333; }
+    100% { background-color: #000; }
+}
+
+.form-container {
+    background-color: #111;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(255, 165, 0, 0.5);
+    animation: boxAnim 5s infinite alternate;
+}
+
+@keyframes boxAnim {
+    0% { box-shadow: 0 0 10px rgba(255, 165, 0, 0.5); }
+    50% { box-shadow: 0 0 20px rgba(255, 165, 0, 0.8); }
+    100% { box-shadow: 0 0 10px rgba(255, 165, 0, 0.5); }
+}
+
+.form-control {
+    background-color: #333;
+    border: 1px solid #ffa500;
+    color: #ffa500;
+}
+
+.form-control:focus {
+    background-color: #333;
+    color: #ffa500;
+    border-color: #ffa500;
+    box-shadow: 0 0 5px rgba(255, 165, 0, 0.5);
+}
+
+.btn-primary {
+    background-color: #ffa500;
+    border: 1px solid #ffa500;
+    color: #000;
+    animation: btnAnim 3s infinite alternate;
+}
+
+@keyframes btnAnim {
+    0% { background-color: #ffa500; }
+    50% { background-color: #ffcc00; }
+    100% { background-color: #ffa500; }
+}
+
+.btn-secondary {
+    background-color: #444;
+    border: 1px solid #ffa500;
+    color: #ffa500;
+}
+
+.btn-secondary:hover {
+    background-color: #555;
+    border-color: #ffcc00;
+}
+
+.password-toggle {
+    cursor: pointer;
+    color: #ffa500;
+}

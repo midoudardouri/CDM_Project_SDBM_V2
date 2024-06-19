@@ -21,6 +21,7 @@
     <link rel="stylesheet" href="<?= PATH ?>/views/Css/main.css">
     <link rel="stylesheet" href="<?= PATH ?>/views/Css/continents.css">
     <link rel="stylesheet" href="<?= PATH ?>/views/Css/home.css">
+    <link rel="stylesheet" href="<?= PATH ?>/views/Css/log.css">
     <!-- SweetAlert2 -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="../../node_modules/sweetalert2/dist/sweetalert2.min.js"></script>
