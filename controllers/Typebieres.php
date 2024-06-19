@@ -9,11 +9,11 @@ class Typebieres extends Controller{
      */
     public function index(){
         // On instancie le modèle "Type"
-        $this->loadModel('typebiere');
+        $this->loadModel('Typebiere');
 
         // On stocke les Marques dans $Types
         // (Y COMPRIS celles qui n'ont pas de FABRICANT)
-        $typebieres = $this->typebiere->getAll();
+        $typebieres = $this->Typebiere->getAll();
         $scriptJS = "$(document).ready(function () {
             // Fonction de recherche
             $('#searchInput').on('keyup', function () {
@@ -36,17 +36,17 @@ class Typebieres extends Controller{
      */
     public function modif(int $id){
         // On instancie le modèle "Type"
-        $this->loadModel('typebiere');
+        $this->loadModel('Typebiere');
 
 
         // On stocke la marque dans $Type
-        $this->typebiere->id = array(
+        $this->Typebiere->id = array(
             'ID_TYPE' => $id
         );
         $typebiere = $this->typebiere->getOne();
 
         // On envoie les données à la vue modif
-        $this->render('modif', compact('typebiere'));
+        $this->render('modif', compact('Typebiere'));
     }
 
     /**
@@ -63,14 +63,14 @@ class Typebieres extends Controller{
         $nom = $_REQUEST['Nom'];
 
         // On instancie le modèle "Type"
-        $this->loadModel('typebiere');
+        $this->loadModel('Typebiere');
 
         // On effectue la mise à jour
-        $this->typebiere->update($id, $nom);
+        $this->Typebiere->update($id, $nom);
 
         // On redirige vers la liste
         // On stocke les continent dans $Type
-        $typebieres = $this->typebiere->getAll();
+        $typebieres = $this->Typebiere->getAll();
         $scriptJS = <<<SCRIPT
         Swal.fire({
           position: "top-end",
@@ -96,13 +96,13 @@ class Typebieres extends Controller{
      */
     public function suppr(int $id){
         // On instancie le modèle "Type"
-        $this->loadModel('typebiere');
+        $this->loadModel('Typebiere');
 
         // On stocke la marque dans $Type
-        $this->typebiere->id = array(
+        $this->Typebiere->id = array(
             'ID_TYPE' => $id
         );
-        $typebiere = $this->typebiere->getOne();
+        $typebiere = $this->Typebiere->getOne();
 
         // On envoie les données à la vue modif
         $this->render('suppr', compact('typebiere'));
@@ -119,15 +119,15 @@ class Typebieres extends Controller{
 
         $id = $_REQUEST['Id'];
         // On instancie le modèle "Type"
-        $this->loadModel('typebiere');
+        $this->loadModel('Typebiere');
 
         // On effectue la mise à jour
-        $this->typebiere->delete($id);
+        $this->Typebiere->delete($id);
 
         // On redirige vers la liste
         // On stocke les marques dans $Types
-        $typebieres = $this->typebiere->getAll();
-        $scriptJS = $scriptJS = <<<SCRIPT
+        $typebieres = $this->Typebiere->getAll();
+       $scriptJS = <<<SCRIPT
         const swalWithBootstrapButtons = Swal.mixin({
           customClass: {
             confirmButton: "btn btn-success",
@@ -190,14 +190,14 @@ class Typebieres extends Controller{
         $nom = $_REQUEST['Nom'];
 
         // On instancie le modèle "Type"
-        $this->loadModel('typebiere');
+        $this->loadModel('Typebiere');
 
         // On effectue la mise à jour
-        $this->typebiere->insert($nom);
+        $this->Typebiere->insert($nom);
 
         // On redirige vers la liste
         // On stocke les marques dans $Types
-        $typebieres = $this->typebiere->getAll();
+        $typebieres = $this->Typebiere->getAll();
         $scriptJS = <<<SCRIPT
         Swal.fire({
           position: "top-end",

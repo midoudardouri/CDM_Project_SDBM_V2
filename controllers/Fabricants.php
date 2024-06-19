@@ -9,11 +9,11 @@ class Fabricants extends Controller{
      */
     public function index(){
         // On instancie le modèle "Fabricant"
-        $this->loadModel('fabricant');
+        $this->loadModel('Fabricant');
 
         // On stocke les Marques dans $Fabricants
         // (Y COMPRIS celles qui n'ont pas de FABRICANT)
-        $fabricants = $this->fabricant->getAll();
+        $fabricants = $this->Fabricant->getAll();
         $scriptJS = "$(document).ready(function () {
             // Fonction de recherche
             $('#searchInput').on('keyup', function () {
@@ -36,17 +36,17 @@ class Fabricants extends Controller{
      */
     public function modif(int $id){
         // On instancie le modèle "Fabricant"
-        $this->loadModel('fabricant');
+        $this->loadModel('Fabricant');
 
 
         // On stocke la marque dans $Fabricant
         $this->fabricant->id = array(
             'ID_FABRICANT' => $id
         );
-        $fabricant = $this->fabricant->getOne();
+        $fabricant = $this->Fabricant->getOne();
 
         // On envoie les données à la vue modif
-        $this->render('modif', compact('fabricant'));
+        $this->render('modif', compact('Fabricant'));
     }
 
     /**
@@ -63,14 +63,14 @@ class Fabricants extends Controller{
         $nom = $_REQUEST['Nom'];
 
         // On instancie le modèle "Fabricant"
-        $this->loadModel('fabricant');
+        $this->loadModel('Fabricant');
 
         // On effectue la mise à jour
-        $this->fabricant->update($id, $nom);
+        $this->Fabricant->update($id, $nom);
 
         // On redirige vers la liste
         // On stocke les continent dans $Fabricant
-        $fabricants = $this->fabricant->getAll();
+        $fabricants = $this->Fabricant->getAll();
         $scriptJS = <<<SCRIPT
 Swal.fire({
   position: "top-end",
