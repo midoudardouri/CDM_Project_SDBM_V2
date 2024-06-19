@@ -1,10 +1,6 @@
 <title>Accueil</title>
 
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <a class="navbar-brand" href="#">
-        <img src="./views/img/a.png" alt="logo" style="width:40px; border-radius: 50%;">
-    </a>
-</nav>
+
 
 <div class="container m-auto text-center">
     <h1 class="display-1">Bonjour à notre site web pour la gestion des données</h1>
