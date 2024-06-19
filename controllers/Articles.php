@@ -215,7 +215,7 @@ class Articles extends Controller{
         // On stocke les Couleur dans $Couleurs
         $Couleurs = $this->Couleur->getAll("NOM_COULEUR");
         // On affiche le formulaire
-        var_dump( $marques,$typebieres,$Couleurs);
+       // var_dump( $marques,$typebieres,$Couleurs);
         $this->render('ajout', compact('marques','typebieres','Couleurs'));
     }
 
